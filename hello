@@ -1,0 +1,27 @@
+import React, { useState } from "react";
+
+function ExampleApp(props) {
+  const [number, setNumber] = useState(0);
+
+  const increment = event => {
+    setNumber(number + 1);
+  };
+  const decrement = event => {
+    setNumber(number - 1);
+  };
+
+  return (
+    <div>
+      <p>Current number: {number}</p>
+      <button onClick={increment} className="button">
+        + 1
+      </button>
+      <button onClick={decrement} className="button">
+        - 1
+      </button>
+    </div>
+  );
+}
+
+export default ExampleApp;
+
